@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, MapPin, Sparkles } from 'lucide-react';
+import { ArrowUpRight, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Hero() {
@@ -23,29 +23,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Typography & CTAs */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-            {/* Pill Capsule Badge with Quantum Logo */}
+            {/* Classic Professional Brand Label */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease }}
+              className="flex items-center gap-2.5 sm:gap-3"
             >
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#6D32D9] bg-white shadow-xs text-xs font-semibold text-[#071126] tracking-wide hover:shadow-sm hover:shadow-[#6D32D9]/20 transition-all">
-                {/* Quantum Logo Mark */}
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-4 h-4 text-[#6D32D9]"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                >
-                  <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(0 50 50)" />
-                  <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(60 50 50)" stroke="#6D32D9" />
-                  <ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(120 50 50)" />
-                  <circle cx="50" cy="50" r="6" fill="#6D32D9" />
-                </svg>
-                <span>Vishnu Quantum Club</span>
-                <Sparkles className="w-3.5 h-3.5 text-[#6D32D9] stroke-[2.2]" />
-              </div>
+              <span className="text-xs sm:text-[13px] font-bold tracking-[0.18em] text-[#6D32D9] uppercase">
+                • VISHNU QUANTUM CLUB
+              </span>
+              <span className="inline-block w-14 sm:w-20 h-[2px] bg-gradient-to-r from-[#6D32D9] via-[#6D32D9]/40 to-transparent rounded-full" />
             </motion.div>
 
             {/* Display Heading */}
