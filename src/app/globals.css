@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy: #071126;
+    --navy-dark: #040a17;
+    --purple: #6D32D9;
+    --purple-light: #F1EBFF;
+    --purple-hover: #5B27BA;
+    --border-subtle: #EAEAEA;
+    --border-medium: #E2E8F0;
+    --text-muted: #64748B;
+    --text-dark: #071126;
+  }
+
+  *, html, body, button, input, select, textarea {
+    font-family: var(--font-sora), 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: var(--text-dark);
+    font-family: var(--font-sora), 'Sora', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, div, .font-serif-display, .font-sans, .font-tech-mono {
+    font-family: var(--font-sora), 'Sora', sans-serif !important;
+  }
+}
+
+/* Custom Utilities for the Vishnu Quantum Club aesthetic with Sora typography */
+.tech-label {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6D32D9;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-label::before {
+  content: "•";
+  color: #6D32D9;
+  font-size: 1.1rem;
+  line-height: 0;
+}
+
+.tech-label-line::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: #CBD5E1;
+  margin-left: 0.5rem;
+}
+
+.section-label-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+/* Premium Card & Interactive Micro-interactions (Ref: adiseshu-portfolio standard) */
+.premium-card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, box-shadow;
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: #D8B4FE;
+  box-shadow: 0 12px 28px -6px rgba(7, 17, 38, 0.08), 0 6px 12px -4px rgba(109, 50, 217, 0.04);
+}
+
+.premium-image-hover {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.group:hover .premium-image-hover,
+.premium-card-hover:hover .premium-image-hover {
+  transform: scale(1.03);
+}
+
+.premium-arrow-hover {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .premium-arrow-hover,
+.premium-card-hover:hover .premium-arrow-hover {
+  transform: translateX(4px);
+}
+
+.premium-icon-hover {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .premium-icon-hover,
+.premium-card-hover:hover .premium-icon-hover {
+  transform: scale(1.06);
+}
+
+.card-subtle {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+
+.card-subtle:hover {
+  border-color: #D1D5DB;
+  box-shadow: 0 10px 25px -5px rgba(7, 17, 38, 0.05), 0 8px 10px -6px rgba(7, 17, 38, 0.03);
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background-color: #071126;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #1A2642;
+  box-shadow: 0 4px 12px rgba(7, 17, 38, 0.15);
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-purple:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #071126;
+  border: 1px solid #E2E8F0;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+
+.btn-secondary:hover {
+  border-color: #94A3B8;
+  background-color: #F8FAFC;
+  box-shadow: 0 4px 12px rgba(7, 17, 38, 0.05);
+}
+
+.btn-purple {
+  background-color: #6D32D9;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+
+.btn-purple:hover {
+  background-color: #5B27BA;
+  box-shadow: 0 4px 16px 0 rgba(109, 50, 217, 0.35);
+}
+
+/* Background grid / orbital line effects */
+.bg-quantum-grid {
+  background-image: radial-gradient(rgba(109, 50, 217, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hide scrollbar for clean mobile swipe rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
