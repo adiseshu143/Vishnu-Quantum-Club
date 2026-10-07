@@ -21,6 +21,13 @@ export const metadata: Metadata = {
     'Quantum Algorithms',
     'Bhimavaram',
   ],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'Vishnu Quantum Club | Vishnu Institute of Technology',
     description: 'Explore. Compute. Innovate. A student-driven quantum computing community.',
