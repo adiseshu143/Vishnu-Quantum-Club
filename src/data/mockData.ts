@@ -76,8 +76,8 @@ export const INITIAL_TEAM: TeamMember[] = [
     isActive: true,
   },
   {
-    id: 'atla-venkata-pooja-nigama-reddy',
-    name: 'ATLA VENKATA POOJA NIGAMA REDDY',
+    id: 'atla-venkata-pujya-nigama-reddy',
+    name: 'ATLA VENKATA PUJYA NIGAMA REDDY',
     role: 'STUDENT CO-ORGANIZER',
     category: 'student-co-organizer',
     imageUrl: 'https://res.cloudinary.com/dzzl7mnqf/image/upload/v1791337728/WhatsApp_Image_2026-09-22_at_3.webp',
